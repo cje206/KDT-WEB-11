@@ -3,32 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실습2 설문조사 폼 만들기</title>
+  <title>제목</title>
 </head>
 <body>
   <h2>설문조사</h2>
 
   <form>
-    <span>이름</span>
-    <input type="text" /><br />
-    <span>이메일</span>
-    <input type="text" placeholder="love@example.com" /><br /><br />
+    <!-- label태그 : input에 라벨을 달아주는 태그 -->
+    <label for="name">이름</label>
+    <input type="text" placeholder="이름" id="name" /><br />
+    <label for="email">이메일</label>
+    <input type="email" placeholder="love@example.com" id="email" /><br /><br />
 
-    <p><b>나이</b></p>
-    <input type="radio" name="age" checked /><span>10대</span>
-    <input type="radio" name="age" /><span>20대</span>
-    <input type="radio" name="age" /><span>30대</span>
-    <input type="radio" name="age" /><span>40대</span>
-    <input type="radio" name="age" /><span>50대</span>
-    <input type="radio" name="age" /><span>60대 이상</span><br /><br />
+    <h4>나이</h4>
+    <input type="radio" name="age" id="age10" checked /><label for="age10">10대</label>
+    <input type="radio" name="age" id="age20" /><label for="age20">20대</label>
+    <input type="radio" name="age" id="age30" /><label for="age30">30대</label>
+    <input type="radio" name="age" id="age40" /><label for="age40">40대</label>
+    <input type="radio" name="age" id="age50" /><label for="age50">50대</label>
+    <input type="radio" name="age" id="age60" /><label for="age60">60대 이상</label><br /><br />
 
-    <p><b>원하는 강의&#40;복수응답가능합니다.&#41;</b></p>
-    <input type="checkbox" name="lecture" checked /><span>html</span>
-    <input type="checkbox" name="lecture" /><span>javascript</span>
-    <input type="checkbox" name="lecture" /><span>css</span><br /><br />
+    <h4>원하는 강의&#40;복수응답가능합니다.&#41;</h4>
+    <input type="checkbox" name="lecture" id="html" checked /><label for="html">html</label>
+    <input type="checkbox" name="lecture" id="js" /><label for="js">javascript</label>
+    <input type="checkbox" name="lecture" id="css" /><label for="css">css</label><br /><br />
 
     <textarea cols="100" rows="10" placeholder="하고 싶은 말을 써주세요:&#41;"></textarea>
-    <button>제출</button>
+    <input type="button" value="제출" />
   </form>
 </body>
 </html>
